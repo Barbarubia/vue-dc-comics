@@ -89,27 +89,23 @@ header {
 
 .navbar {
     height: 5rem;
-}
-
-li {
+    li {
     height: 5rem;
     display: inline-block;
     margin: 0 1rem 0 1rem;
     line-height: 5rem;
     text-transform: uppercase;
-    // &.active {
-    //     border-bottom: 2px solid #0282f9;
-    // }
-    a {
-        display: inline-block;
-        line-height: 5rem;
-        vertical-align: middle;
-        text-decoration: none;
-        color: black;
-        font-weight: 600;
-        &.active {
-            border-bottom: 2px solid $blue-dc-color;
-            color: $blue-dc-color;
+        a {
+            display: inline-block;
+            line-height: 5rem;
+            vertical-align: middle;
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            &.active {
+                border-bottom: 2px solid $blue-dc-color;
+                color: $blue-dc-color;
+                }
         }
     }
 }

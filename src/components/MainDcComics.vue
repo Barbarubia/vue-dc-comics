@@ -66,6 +66,10 @@ export default {
             .container {
                 display: flex;
                 justify-content: space-around;
+                list-style: none;
+                li {
+                    text-transform: uppercase;
+                }
             }
         }
     }
