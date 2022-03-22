@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <HeaderDcComics />
+    <MainDcComics />
   </div>
 </template>
 
 <script>
 import HeaderDcComics from './components/HeaderDcComics.vue'
+import MainDcComics from './components/MainDcComics.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderDcComics
+    HeaderDcComics,
+    MainDcComics
   }
 }
 </script>

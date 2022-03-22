@@ -1,15 +1,13 @@
 <template>
-  <header>
+  <header class="container">
       <div class="logo">
           <a href="#">
               <img src="../assets/img/dc-logo.png" alt="Logo DC Comics">
           </a>
       </div>
-      <nav class="navbar">
-          <ul>
-            <li @click="setActiveIndex(index)" v-for="(link, index) in links" :key="index" :class="{active: index == activeIndex}"><a href="link.href">{{ link.text }}</a></li>
-          </ul>
-      </nav>
+      <ul class="navbar">
+          <li @click="setActiveIndex(index)" v-for="(link, index) in links" :key="index" :class="{active: index == activeIndex}"><a href="link.href" :class="{active: index == activeIndex}">{{ link.text }}</a></li>
+      </ul>
   </header>
 </template>
 
@@ -72,30 +70,47 @@ export default {
 </script>
 
 <style scoper lang="scss">
+@import "../assets/scss/partials/reset.scss";
+@import "../assets/scss/partials/variables";
+@import "../assets/scss/partials/general";
+
 header {
-    height: 5rem;
+    padding: .5rem 0;
     display: flex;
     justify-content: space-between;
     .logo {
+        height: 5rem;
         img {
             height: 100%;
+            vertical-align: middle;
         }
     }
+}
+
+.navbar {
+    height: 5rem;
 }
 
 li {
     height: 5rem;
     display: inline-block;
-    padding: 0 1rem;
+    margin: 0 1rem 0 1rem;
+    line-height: 5rem;
     text-transform: uppercase;
-    &.active {
-        border-bottom: 2px solid green;
-    }
+    // &.active {
+    //     border-bottom: 2px solid #0282f9;
+    // }
     a {
         display: inline-block;
+        line-height: 5rem;
+        vertical-align: middle;
         text-decoration: none;
         color: black;
         font-weight: 600;
+        &.active {
+            border-bottom: 2px solid $blue-dc-color;
+            color: $blue-dc-color;
+        }
     }
 }
 </style>
