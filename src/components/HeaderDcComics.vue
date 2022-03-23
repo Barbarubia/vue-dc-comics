@@ -71,7 +71,7 @@ export default {
 }
 </script>
 
-<style scoper lang="scss">
+<style scoped lang="scss">
 @import "../assets/scss/partials/reset.scss";
 @import "../assets/scss/partials/variables";
 @import "../assets/scss/partials/general";
