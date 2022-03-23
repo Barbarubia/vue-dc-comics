@@ -211,14 +211,15 @@ ul {
 
 .footer-links-container {
     padding: 2rem 0;
-    height: 22rem;
+    height: 24rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1rem 2rem;
     a {
-        text-decoration: none;
-        color: #828282;
+      font-size: .8rem;
+      text-decoration: none;
+      color: #828282;
     }
 }
 
@@ -229,13 +230,15 @@ ul {
     .container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         button {
             background: none;
             border: 1px solid $blue-dc-color;
-            padding: .5rem;
+            padding: .8rem;
             text-transform: uppercase;
             color: white;
-            font-weight: 800;
+            font-size: 1.1rem;
+            font-weight: 600;
             cursor: pointer;
         }
         .social-networks {
