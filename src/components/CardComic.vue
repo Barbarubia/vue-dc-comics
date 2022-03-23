@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import "../assets/scss/partials/reset.scss";
 @import "../assets/scss/partials/variables";
 @import "../assets/scss/partials/general";
@@ -24,7 +24,7 @@ export default {
         flex-basis: calc((100% / 6) - 2rem);
         img {
           width: 100%;
-          height: 155px;
+          height: 168px;
           object-fit: cover;
           object-position: top;
         }

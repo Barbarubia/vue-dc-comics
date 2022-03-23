@@ -2,6 +2,10 @@
   <section class="content">
     <div class="jumbo"></div>
 
+    <div class="current-series">
+      <h3>Current Series</h3>
+    </div>
+
     <div class="container grid-comics">
       <CardComic
         v-for="comic in arrComics"
@@ -9,6 +13,9 @@
         :card-image="comic.thumb"
         :card-title="comic.series"
       />
+    </div>
+    <div class="container">
+      <button class="load-more">Load more</button>
     </div>
   </section>
 </template>
@@ -102,7 +109,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import "../assets/scss/partials/reset.scss";
 @import "../assets/scss/partials/variables";
 @import "../assets/scss/partials/general";
@@ -115,6 +122,7 @@ export default {
         background-image: url(../assets/img/jumbotron.jpg);
       }
       .container {
+        text-align: center;
         padding: 3rem 0;
       }
       .grid-comics {
@@ -123,6 +131,27 @@ export default {
         align-items: stretch;
         flex-wrap: wrap;
         gap: 2rem;
+        text-align: left;
       }
+      .load-more {
+        background-color: $blue-dc-color;
+        border: none;
+        padding: .8rem 3rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+        cursor: pointer;
+      }
+}
+
+.current-series {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h3 {
+  display: inline;
+  background-color: $blue-dc-color;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
 }
 </style>
