@@ -6,7 +6,7 @@
           </a>
       </div>
       <ul class="navbar">
-          <li @click="setActiveIndex(index)" v-for="(link, index) in links" :key="index" :class="{active: index == activeIndex}"><a href="link.href" :class="{active: index == activeIndex}">{{ link.text }}</a></li>
+          <li @click="setActiveIndex(index)" v-for="(link, index) in links" :key="index" :class="{active: index == activeIndex}"><a :href="link.href" :class="{active: index == activeIndex}">{{ link.text }}</a></li>
       </ul>
   </header>
 </template>

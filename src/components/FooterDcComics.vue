@@ -12,14 +12,10 @@
       </section>
       <section class="footer-navbar">
           <div class="container">
-              <button>Sign un now!</button>
+              <button>Sign up now!</button>
               <div class="social-networks">
                   <h3>Follow us</h3>
-                  <a href="#"><img src="../assets/img/footer-facebook.png" alt="facebook"></a>
-                  <a href="#"><img src="../assets/img/footer-twitter.png" alt="twitter"></a>
-                  <a href="#"><img src="../assets/img/footer-youtube.png" alt="youtube"></a>
-                  <a href="#"><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a>
-                  <a href="#"><img src="../assets/img/footer-periscope.png" alt="periscope"></a>
+                  <a v-for="(social, index) in socials" :key="index" :href="social.href"><img :src="require('../assets/img/' + social.icon)" :alt="social.name"></a>
               </div>
           </div>
       </section>
@@ -152,6 +148,33 @@ export default {
             }
           ]
         }
+      ],
+      socials: [
+        {
+          name: 'Facebook',
+          icon: 'footer-facebook.png',
+          href: '#'
+        },
+        {
+          name: 'Twitter',
+          icon: 'footer-twitter.png',
+          href: '#'
+        },
+        {
+          name: 'Youtube',
+          icon: 'footer-youtube.png',
+          href: '#'
+        },
+        {
+          name: 'Pinterest',
+          icon: 'footer-pinterest.png',
+          href: '#'
+        },
+        {
+          name: 'Periscope',
+          icon: 'footer-periscope.png',
+          href: '#'
+        }
       ]
     }
   }
@@ -211,6 +234,18 @@ ul {
             border: 1px solid $blue-dc-color;
             padding: .5rem;
             text-transform: uppercase;
+            color: white;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        .social-networks {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          h3 {
+            text-transform: uppercase;
+            color: $blue-dc-color;
+          }
         }
     }
 }

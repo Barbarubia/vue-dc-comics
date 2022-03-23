@@ -9,7 +9,7 @@
       <section class="buy-links">
         <ul class="container">
           <li v-for="(link, index) in buyLinks" :key="index">
-            <img :src="'../assets/img/' + link.img" :alt="link.text">
+            <img :src="require('../assets/img/' + link.img)" :alt="link.text">
             <span>{{ link.text }}</span>
           </li>
         </ul>
@@ -40,7 +40,7 @@ export default {
           text: 'Comic Shop Locator'
         },
         {
-          img: 'buy-dc-power-visa.png',
+          img: 'buy-dc-power-visa.svg',
           text: 'DC Power Visa'
         }
       ]
@@ -68,7 +68,12 @@ export default {
                 justify-content: space-around;
                 list-style: none;
                 li {
-                    text-transform: uppercase;
+                  text-transform: uppercase;
+                }
+                img {
+                  height: 2rem;
+                  vertical-align: middle;
+                  margin-right: .5rem;
                 }
             }
         }
