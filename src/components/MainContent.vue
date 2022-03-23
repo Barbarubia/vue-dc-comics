@@ -1,9 +1,11 @@
 <template>
   <section class="content">
-      <div class="container">
-        <h2>--&gt; Content goes here &lt;-- </h2>
-      </div>
-    </section>
+    <div class="jumbo"></div>
+
+    <div class="container">
+      <h2>--&gt; Content goes here &lt;-- </h2>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -17,11 +19,15 @@ export default {
 @import "../assets/scss/partials/variables";
 @import "../assets/scss/partials/general";
 
-main {
-  color: white;
-  .content {
-      padding: 3rem 0;
-      background-color: black;
-  }
+.content {
+        background-color: $main-dark-bg;
+        color: white;
+      .jumbo {
+        height: 25rem;
+        background-image: url(../assets/img/jumbotron.jpg);
+      }
+      .container {
+        padding: 3rem 0;
+      }
 }
 </style>
