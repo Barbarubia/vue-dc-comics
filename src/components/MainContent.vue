@@ -2,9 +2,7 @@
   <section class="content">
     <div class="jumbo"></div>
 
-    <div class="container">
-      <h2>--&gt; Content goes here &lt;-- </h2>
-
+    <div class="container grid-comics">
       <CardComic
         v-for="comic in arrComics"
         :key="comic.series"
@@ -118,6 +116,13 @@ export default {
       }
       .container {
         padding: 3rem 0;
+      }
+      .grid-comics {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 2rem;
       }
 }
 </style>
